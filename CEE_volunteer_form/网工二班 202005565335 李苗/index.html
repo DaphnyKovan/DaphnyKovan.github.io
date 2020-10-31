@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>高考志愿填写表</title>
+
+
+
+	</head>
+
+	<style>
+		#demo {
+			background-color: #e0edd3;
+			width: 70;
+			border: hidden ;
+		}
+		
+		#demo1{
+			background-color: #99CC99;
+			width: 70;
+			border: hidden ;
+		}
+		
+		#one{
+			background-color: #99CC99;
+			width: 3.125rem;
+			height: 1.5625rem;
+		}
+		
+		table td{
+			border: 1px solid #000000;
+			border-color: #41a863;
+			font: 1.0em/1.0 arial,microsoftyahei,sans-serif;
+			padding: 4px;
+			text-align: center;
+		}
+		
+		table th{
+			border: 1px solid #000000;
+			border-color: #41a863;
+			font: 1.0em/1.0 arial,microsoftyahei,sans-serif;
+			padding: 4px;
+			text-align: center;
+		}
+		
+		caption {
+			font-size: 1.5625rem;
+		}
+		
+		tr:nth-child(even){
+			background-color: #99CC99;
+		}
+		
+		
+
+	</style>
+
+	<body bgcolor="#e0edd3" align="center">
+		<h1 align="center">2021年普通高校本科一批招生考生志愿表</h1>
+		<br />
+		<form action="submit.php" method="get" ">
+		
+		    <table border=" 1" width="950" cellspacing="0" cellpadding="0"
+		 align="center">
+			<caption><b>个人基本信息</b></caption>
+
+			<tr>
+				<td width="75">姓名</td>
+				<td width="75"><input type="text" id="demo" /></td>
+				<td width="75">性别</td>
+				<td style="width: 75;"><input type="text" id="demo" /></td>
+
+				<td width="150" height="125" rowspan="6">
+					<div class="col-sm-5">
+						<label class="btn btn-info fileinput-button">
+							<span>选择视频</span>
+							<input id="video" type="file" style="opacity: 0;" />
+							<div>
+								<video style="width: 6.75rem; height: 4.5rem;" autoplay="autoplay" muted="muted" controls="controls">
+									<source src="其实有七秒.mp4" type="video/mp4">
+									</source>
+								</video>
+							</div>
+						</label>
+					</div>
+				</td>
+
+				<td width="125" height="125" rowspan="6">
+					<div class="col-sm-5">
+						<label class="btn btn-info fileinput-button">
+							<span>选择靓照</span>
+							<input id="file" type="file" style="opacity: 0;" />
+							<div>
+								<img src="" id="preview" style="width: 6rem; height: 6rem;">
+							</div>
+						</label>
+					</div>
+				</td>
+
+				<script>
+					var file = document.querySelector('#file');
+			var preview = document.querySelector("#preview");
+			file.onchange = function() {
+				var reader = new FileReader();
+				reader.readAsDataURL(this.files[0]);
+				reader.onload = function() {
+					preview.src = reader.result;
+				}
+			}
+		</script>
+
+			<tr>
+				<td width="75" bgcolor="#e0edd3">民族</td>
+				<td style="width: 70;" bgcolor="#e0edd3"><input type="text" id="demo" /></td>
+				<td width="75" bgcolor="#e0edd3">籍贯</td>
+				<td style="width: 70;" bgcolor="#e0edd3"><input type="text" id="demo" /></td>
+
+
+			</tr>
+			<tr>
+				<td width="75">出生日期</td>
+				<td style="width: 70;"><input type="text" id="demo" /></td>
+				<td width="75">身份证号</td>
+				<td style="width: 70;"><input type="text" id="demo" /></td>
+
+			</tr>
+			<tr>
+				<td width="75" bgcolor="#e0edd3">政治面貌</td>
+				<td style="width: 75;" bgcolor="#e0edd3"><input type="text" id="demo" /></td>
+				<td width="75" bgcolor="#e0edd3">联系方式</td>
+				<td style="width: 70;" bgcolor="#e0edd3"><input type="text" id="demo" /></td>
+			</tr>
+			</table>
+			<br />
+			<br />
+
+			<table align="center" border="1" cellspacing="0" cellpadding="0">
+				<caption><b>志愿填报信息</b></caption>
+
+				<tr>
+					<th></th>
+					<th>院校代码</th>
+					<th>专业代码</th>
+					<th>专业代码</th>
+					<th>专业代码</th>
+					<th>专业代码</th>
+					<th>专业代码</th>
+					<th>专业代码</th>
+					<th>是否服从</th>
+
+				</tr>
+				<tr>
+
+					<td>1</td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td>
+						<input type="radio" name="option1" />是
+						<input type="radio" name="option1" />否</td>
+				</tr>
+
+				<tr>
+					<td>2</td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td>
+						<input type="radio" name="option2" />是
+						<input type="radio" name="option2" />否</td>
+				</tr>
+
+				<tr>
+					<td>3</td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td>
+						<input type="radio" name="option3" />是
+						<input type="radio" name="option3" />否</td>
+				</tr>
+
+				<tr>
+					<td>4</td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td>
+						<input type="radio" name="option4" />是
+						<input type="radio" name="option4" />否</td>
+				</tr>
+
+				<tr>
+					<td>5</td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td><input type="text" id="demo1" /></td>
+					<td>
+						<input type="radio" name="option5" />是
+						<input type="radio" name="option5" />否</td>
+				</tr>
+
+				<tr>
+
+					<td>6</td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td><input type="text" id="demo" /></td>
+					<td>
+						<input type="radio" name="option6" />是
+						<input type="radio" name="option6" />否</td>
+					</td>
+
+				</tr>
+
+			</table>
+			<br />
+
+			<div align="center">
+				<input type="reset" id="one">
+				<input type="button" onclick="clickMe()" id="one" value="提交">
+			</div>
+
+			<script language="javascript">
+				function clickMe() {
+					alert("提交成功！");
+				}
+			</script>
+
+		</form>
+
+
+
+		 
+
+	</body>
+</html>
