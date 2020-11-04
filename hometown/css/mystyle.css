@@ -1,0 +1,74 @@
+.button{
+    background-color: #ffb700;
+    color: black;
+    padding: 20px 35px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+	border-radius: 6px;
+	transition: all 0.5s;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.one{
+    background-color: #a3cdff;
+    color: black;
+    padding: 20px 35px;
+    text-decoration: none;
+    font-size: 18px;
+	border-radius: 6px;
+	transition: all 0.5s;
+}
+
+.one span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.one span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.one:hover span {
+  padding-right: 25px;
+}
+
+.one:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.two{
+	font-size: 40px;
+}
